@@ -3,8 +3,16 @@
 
 on property:sys.boot_completed=1
         exec u:r:su:s0 root root -- /init.special_power.sh
-   
-        # according to Qcom this legacy value improves first launch latencies
+   	exec u:r:init:s0 root root -- /init.spectrum.sh
+  	exec u:r:su:s0 root root -- /init.spectrum.sh
+  	# Enable Spectrum support
+	
+	setprop spectrum.support 1
+	# Add kernel name
+	
+   	setprop persist.spectrum.kernel DarkOne-Pie
+	
+	# according to Qcom this legacy value improves first launch latencies
         # stock value is 512k
         # from franciscofranco
         setprop dalvik.vm.heapminfree 3m
