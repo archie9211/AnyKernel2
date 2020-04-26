@@ -5,12 +5,12 @@
 # begin properties
 properties() { '
 kernel.string=DarkOne Kernel by nageen9211@xda-developers
-do.devicecheck=1
+do.devicecheck=0
 do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=chef
-device.name2=chef_sprout
+device.name1=B2N
+device.name2=
 device.name3=
 device.name4=
 device.name5=
